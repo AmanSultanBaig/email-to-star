@@ -1,0 +1,14 @@
+{
+  "name": "email-to-star",
+  "version": "1.0.0",
+  "description": "convert email to star",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Aman Sultan Baig",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
