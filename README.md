@@ -4,12 +4,12 @@ Javascript library to calculate age from date of birth
 
 # Installation
 
-npm install email-to-star
+npm install email-to-stars
 
 # Usage
 
 ```
-const emailToStr = require("email-to-star");
+const emailToStr = require("email-to-stars");
 
 console.log(emailToStr("amansultanbaig@gma.com"));
 ```

@@ -1,24 +1,26 @@
 const isEmailValid = require("./utils/email.tester");
 
-const convertToStar = (email) => {
+const convertEmailToStar = (email) => {
   if (!isEmailValid(email)) {
     return { error: "Invalid email" };
   }
 
   email = email.trim();
+  let result = "";
   const emailId = email.split("@")[0];
   const domain = email.split("@")[1];
-  let hiddenEmail = email[0];
 
-  for (let i = 1; i < emailId.length; i++) {
+  for (let i = 0; i < emailId.length; i++) {
     if (i < 4) {
-      hiddenEmail += emailId[i];
+      result += emailId[i];
     } else {
-      hiddenEmail += "*";
+      result += "*";
     }
   }
-  let result = hiddenEmail + "@" + domain;
+  result = result + "@" + domain;
   return result;
 };
 
-module.exports = convertToStar;
+console.log(convertEmailToStar("amansultanbaig@gmail.com"));
+
+module.exports = convertEmailToStar;

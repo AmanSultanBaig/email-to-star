@@ -1,7 +1,7 @@
 {
-  "name": "email-to-star",
+  "name": "email-to-stars",
   "version": "1.0.0",
-  "description": "convert email to star",
+  "description": "convert email to stars",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
