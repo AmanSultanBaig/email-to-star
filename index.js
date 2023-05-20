@@ -1,12 +1,11 @@
-let regex =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const isEmailValid = require("./utils/email.tester");
 
 const convertToStar = (email) => {
-  if (!regex.test(email)) {
-    console.log({ error: "Invalid email" });
+  if (!isEmailValid(email)) {
     return { error: "Invalid email" };
   }
 
+  email = email.trim();
   const emailId = email.split("@")[0];
   const domain = email.split("@")[1];
   let hiddenEmail = email[0];
@@ -18,8 +17,8 @@ const convertToStar = (email) => {
       hiddenEmail += "*";
     }
   }
-
-  console.log(hiddenEmail + domain);
+  let result = hiddenEmail + "@" + domain;
+  return result;
 };
 
-convertToStar("amansultanabig@gmail.com");
+module.exports = convertToStar;
