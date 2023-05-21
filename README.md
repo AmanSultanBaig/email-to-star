@@ -1,6 +1,6 @@
 # Introduction
 
-Javascript library to calculate age from date of birth
+Javascript library to convert email to star
 
 # Installation
 
